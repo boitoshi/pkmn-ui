@@ -33,8 +33,7 @@ jobs:
       - run: |
           mkdir site
           cp -r apps/demo-astro/dist/* site/
-          mkdir site/vue
-          cp -r apps/demo-vue/dist/*    site/vue/
+          cp -r apps/demo-vue/dist site/vue
           mkdir -p site/packages/themes/gba
           mkdir -p site/packages/themes/ds/dot  
           mkdir -p site/packages/themes/switch/lgpe
