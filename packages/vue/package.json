@@ -1,0 +1,10 @@
+{
+  "name": "@pkmn-ui/vue",
+  "version": "0.0.0",
+  "dependencies": {
+    "@pkmn-ui/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  }
+}

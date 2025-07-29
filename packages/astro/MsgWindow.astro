@@ -1,0 +1,9 @@
+---
+interface Props{ title?: string; showCursor?: boolean }
+const { title, showCursor = true } = Astro.props;
+---
+<div class="msg-window">
+  { title && <div class="msg-title">{title}</div> }
+  <div><slot /></div>
+  { showCursor && <div class="msg-cursor">▶</div> }
+</div>

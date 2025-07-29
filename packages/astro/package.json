@@ -1,0 +1,10 @@
+{
+  "name": "@pkmn-ui/astro",
+  "version": "0.0.0",
+  "dependencies": {
+    "@pkmn-ui/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0"
+  }
+}
