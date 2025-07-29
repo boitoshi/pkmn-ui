@@ -1,0 +1,88 @@
+/* ────────────────────────────────
+   DS DOT THEME  (Gen4–5: DPPt / HGSS / BW / BW2)
+   上位 : @pkmn-ui/core/index.css を先に import！
+──────────────────────────────── */
+@import "@pkmn-ui/core/index.css";
+
+/* ===== パレット & トークン上書き ===== */
+:root{
+  /* ===== 背景・パネル ===== */
+  --ui-bg          : #cdd5e2;      /* 薄い青みグレー：DS画面の“液晶感” */
+  --panel-bg       : #f4f7fc;      /* 白寄りの淡色パネル */
+  --panel-border   : 1px solid #556;/* DS世代は 1px 枠が基本 */
+
+  /* ===== 全体フォント ===== */
+  --ui-font        : "DotGothic16", system-ui, sans-serif;
+  --border-radius  : 8px;          /* 丸すぎない段付き角 */
+
+  /* ===== ベベル表現 ===== */
+  --bevel-hl       : rgba(255,255,255,.8); /* 上ハイライト */
+  --bevel-sh       : rgba(0,0,0,.15);      /* 下シャドウ */
+
+  /* ===== タイプカラー（Gen4基準・参考値） ===== */
+  --t-normal   : #a8a090;
+  --t-fire     : #f08030;
+  --t-water    : #6890f0;
+  --t-electric : #f8d030;
+  --t-grass    : #78c850;
+  --t-ice      : #98d8d8;
+  --t-fighting : #c03028;
+  --t-poison   : #a040a0;
+  --t-ground   : #e0c068;
+  --t-flying   : #a890f0;
+  --t-psychic  : #f85888;
+  --t-bug      : #a8b820;
+  --t-rock     : #b8a038;
+  --t-ghost    : #705898;
+  --t-dragon   : #7038f8;
+  --t-dark     : #705848;
+  --t-steel    : #b8b8d0;
+}
+
+/* ===== ベースレイアウト ===== */
+body{
+  background: var(--ui-bg);
+  font-family: var(--ui-font);
+  color: #2b2b2b;
+  image-rendering: pixelated;       /* ドット感を強調 */
+}
+
+/* ===== 汎用パネルクラス（.panel） ===== */
+.panel{
+  background: var(--panel-bg);
+  border: var(--panel-border);
+  border-radius: var(--border-radius);
+  box-shadow:
+    inset 0 1px 0 var(--bevel-hl),
+    inset 0 -1px 0 var(--bevel-sh),
+    0 1px 0 rgba(0,0,0,.08);
+}
+
+/* ===== タイプバッジ共通 ===== */
+.type-badge{
+  display:inline-flex;align-items:center;font-weight:700;line-height:1;
+  border:1px solid #2b2b2b;border-radius:6px;padding:2px 10px;
+  text-shadow:0 1px 0 #0003;
+  box-shadow:
+    inset 0 1px 0 var(--bevel-hl),
+    inset 0 -1px 0 var(--bevel-sh),
+    0 1px 0 rgba(0,0,0,.08);
+}
+/* 色付け（CSS 変数で一括） */
+.type-badge.normal   { background:var(--t-normal);}
+.type-badge.fire     { background:var(--t-fire);}
+.type-badge.water    { background:var(--t-water);}
+.type-badge.electric { background:var(--t-electric);}
+.type-badge.grass    { background:var(--t-grass);}
+.type-badge.ice      { background:var(--t-ice);}
+.type-badge.fighting { background:var(--t-fighting); color:#fff;}
+.type-badge.poison   { background:var(--t-poison); color:#fff;}
+.type-badge.ground   { background:var(--t-ground);}
+.type-badge.flying   { background:var(--t-flying);}
+.type-badge.psychic  { background:var(--t-psychic);}
+.type-badge.bug      { background:var(--t-bug);}
+.type-badge.rock     { background:var(--t-rock);}
+.type-badge.ghost    { background:var(--t-ghost); color:#fff;}
+.type-badge.dragon   { background:var(--t-dragon); color:#fff;}
+.type-badge.dark     { background:var(--t-dark); color:#fff;}
+.type-badge.steel    { background:var(--t-steel);}

@@ -1,0 +1,61 @@
+/*─────────────────────────────────────────────
+  Pokémon UI KIT – CORE
+  すべてのテーマが継承する “共通ベース”
+────────────────────────────────────────────*/
+
+/* ===== 1) ミニリセット ===== */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
+html,body{ height:100% }
+
+/* ===== 2) フォント & デフォルト色 ===== */
+:root{
+  /* フォントは後でテーマ別に変えても OK */
+  --ui-font       : system-ui, sans-serif;
+  --ink           : #2b2b2b;          /* 文字色ベース */
+
+  /* 形状共通トークン（テーマで上書き推奨） */
+  --border-width  : 1px;
+  --radius        : 12px;
+
+  /* 立体感トークン（テーマで調整） */
+  --bevel-hl      : rgba(255,255,255,.8);
+  --bevel-sh      : rgba(0,0,0,.1);
+
+  /* 画面／パネルの下地（テーマで必ず上書き！） */
+  --ui-bg         : #ffffff;
+  --panel-bg      : #ffffff;
+  --panel-border  : 1px solid rgba(0,0,0,.12);
+  --panel-shadow  : 0 1px 2px rgba(0,0,0,.05);
+
+  /* アクセント色（テーマが自分の “推し色” をセット） */
+  --accent        : #ff6464;
+}
+
+/* ===== 3) ベーシックスタイル ===== */
+body{
+  background:var(--ui-bg);
+  color:var(--ink);
+  font-family:var(--ui-font);
+  line-height:1.5;
+}
+
+/* パネル汎用クラス（テーマ側で見た目を上書き） */
+.panel{
+  background:var(--panel-bg);
+  border:var(--panel-border);
+  border-radius:var(--radius);
+  box-shadow:var(--panel-shadow);
+}
+
+/* ボタン汎用クラス（お好みで） */
+.btn{
+  padding:6px 14px;
+  border:var(--border-width) solid var(--ink);
+  border-radius:calc(var(--radius) / 1.5);
+  background:var(--accent);
+  color:#fff; font-weight:700;
+  cursor:pointer;
+  transition: transform .12s ease;
+}
+.btn:hover{ transform:translateY(-1px); }
+

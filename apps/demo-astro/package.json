@@ -1,0 +1,16 @@
+{
+  "name": "@pkmn-ui/demo-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@pkmn-ui/astro": "workspace:*",
+    "@pkmn-ui/themes": "workspace:*",
+    "astro": "^4.0.0"
+  }
+}

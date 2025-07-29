@@ -1,0 +1,53 @@
+/* Let's Go, Pikachu/Eevee!  (LGPE) ─ pastel & soft shadow */
+@import "@pkmn-ui/core/index.css";
+
+/* -------- 変数上書き -------- */
+:root{
+  /* 背景 & パネル */
+  --ui-bg        : #fffef8;                      /* アイボリー寄りホワイト */
+  --panel-bg     : #ffffff;
+  --panel-border : 2px solid #E2DCC4;            /* やさしい黄み枠線 */
+  --panel-shadow : 0 4px 6px rgba(0,0,0,.06);    /* ふわっと広い影 */
+
+  /* 形状 */
+  --radius       : 20px;                         /* Switch世代・大きめ丸 */
+  --border-width : 2px;
+
+  /* アクセント（ロゴの黄色に寄せる） */
+  --accent       : #FFCE32;                      /* ピカチュウイエロー */
+
+  /* フォント */
+  --ui-font      : "M PLUS Rounded 1c", system-ui, sans-serif;
+
+  /* タイプカラーは Gen7 基準でややパステル調 */
+  --t-normal:#AAA998;  --t-fire:#FD944B; --t-water:#5FAAFD; --t-electric:#FFD73B;
+  --t-grass:#8CD663;   --t-ice:#9EE9E9; --t-fighting:#D44D40; --t-poison:#B76AC9;
+  --t-ground:#E5C97B; --t-flying:#BAC4FF; --t-psychic:#FF7DAE; --t-bug:#B1C933;
+  --t-rock:#C4B857;   --t-ghost:#8C71C4; --t-dragon:#857BFF; --t-dark:#857055;
+  --t-steel:#CACADC;  --t-fairy:#F5A4C5;
+}
+
+/* -------- パネル基礎 -------- */
+body{
+  background:var(--ui-bg);
+  font-family:var(--ui-font);
+  color:#384048;
+}
+
+/* 汎用 .panel をふわ影で */
+.panel{
+  background:var(--panel-bg);
+  border:var(--panel-border);
+  border-radius:var(--radius);
+  box-shadow:var(--panel-shadow);
+}
+
+/* タイプバッジ（丸く・影やわらか） */
+.type-badge{
+  display:inline-flex;align-items:center;font-weight:700;
+  border:var(--border-width) solid #fff9;
+  border-radius:calc(var(--radius) * 0.6);
+  padding:4px 14px;
+  line-height:1; font-size:14px;
+  box-shadow:inset 0 1px 1px #fff9, inset 0 -1px 1px #0001;
+}

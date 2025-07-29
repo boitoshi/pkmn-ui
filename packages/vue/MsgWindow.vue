@@ -1,16 +1,17 @@
----
-interface Props {
-  title?: string;
-}
-const { title } = Astro.props;
----
+<script setup lang="ts">
+defineProps<{
+  title?: string
+}>()
+</script>
 
-<div class="msg-window panel">
-  {title && <header class="msg-header">{title}</header>}
-  <div class="msg-content">
-    <slot />
+<template>
+  <div class="msg-window panel">
+    <header v-if="title" class="msg-header">{{ title }}</header>
+    <div class="msg-content">
+      <slot />
+    </div>
   </div>
-</div>
+</template>
 
 <style>
 .msg-window {

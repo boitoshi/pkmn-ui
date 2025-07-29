@@ -1,0 +1,60 @@
+/* Sword / Shield  (SwSh) ─ clean card & neon accent */
+@import "@pkmn-ui/core/index.css";
+
+/* -------- 変数上書き -------- */
+:root{
+  /* 背景 & パネル */
+  --ui-bg        : #f2f4f8;                      /* うすグレー：フィールドUI背景 */
+  --panel-bg     : #ffffff;                      /* 白カード */
+  --panel-border : 1px solid rgba(0,0,0,.12);
+  --panel-shadow : 0 2px 8px rgba(0,0,0,.10);    /* シャキッと深め影 */
+
+  /* 形状 */
+  --radius       : 18px;                         /* LGPE より少し角張り */
+  --border-width : 1px;
+
+  /* アクセント（タイトル画面のブルー‑ピンク） */
+  --accent       : #00B8F0;                      /* ダイマックスブルー */
+  --accent2      : #FF3DBD;                      /* ダイマックスピンク */
+
+  /* フォント */
+  --ui-font      : "Noto Sans JP", system-ui, sans-serif;
+
+  /* タイプカラー – Gen8 基準、彩度やや下げ＋コントラスト強 */
+  --t-normal:#A8A77A;  --t-fire:#E76B25; --t-water:#4D90FE; --t-electric:#F6C71C;
+  --t-grass:#63BE5F;   --t-ice:#7ED4D4; --t-fighting:#C22E28; --t-poison:#8F46A9;
+  --t-ground:#D1B156; --t-flying:#9D90F9; --t-psychic:#F64886; --t-bug:#8CA91A;
+  --t-rock:#A8922B;   --t-ghost:#5E5CBC; --t-dragon:#5C40E0; --t-dark:#54433C;
+  --t-steel:#9EA8C3;  --t-fairy:#E29CCF;
+}
+
+/* -------- レイアウト -------- */
+body{
+  background:var(--ui-bg);
+  font-family:var(--ui-font);
+  color:#262626;
+}
+
+/* カード風パネル */
+.panel{
+  background:var(--panel-bg);
+  border:var(--panel-border);
+  border-radius:var(--radius);
+  box-shadow:var(--panel-shadow);
+}
+
+/* タイプバッジ：フラット＋細枠 */
+.type-badge{
+  display:inline-flex;align-items:center;font-weight:700;
+  border:var(--border-width) solid rgba(0,0,0,.15);
+  border-radius:calc(var(--radius) * 0.55);
+  padding:4px 14px;
+  line-height:1; font-size:14px;
+}
+
+/* 例：アクティブ要素にネオンアウトライン */
+.active-outline{
+  outline:3px solid var(--accent2);
+  outline-offset:0;
+  filter:drop-shadow(0 0 4px var(--accent2));
+}

@@ -1,0 +1,9 @@
+@import "./base.css";
+
+/* --- XY・ORAS 差分トークン --- */
+:root{
+  --accent       : #6ccfff;                   /* さわやかライトブルー */
+  --ui-bg        : #f0f5ff;                  /* 明るいハイキーを据え置き */
+  --panel-shadow : 0 1px 2px rgba(0,0,0,.06);/* 影は薄めフラット */
+  /* （円角14px・色トークンは base を継承） */
+}

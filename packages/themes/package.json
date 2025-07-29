@@ -1,0 +1,10 @@
+{
+  "name": "@pkmn-ui/themes",
+  "version": "0.0.0",
+  "description": "Pokémon UI themes for different console generations",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@pkmn-ui/core": "workspace:*"
+  }
+}

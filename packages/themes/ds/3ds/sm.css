@@ -1,0 +1,9 @@
+@import "./base.css";
+
+/* --- SM・USUM 差分トークン --- */
+:root{
+  --accent       : #ff9a2b;                   /* オレンジ系アクセント */
+  --ui-bg        : #faf5ec;                  /* 砂浜っぽいベージュ */
+  --panel-shadow : 0 2px 4px rgba(0,0,0,.12);/* 影を少し強調 */
+  --radius       : 16px;                     /* 角丸をやや大きく */
+}

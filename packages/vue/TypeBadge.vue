@@ -1,15 +1,13 @@
----
-// Props
-interface Props{
-  type: "normal" | "fire" | "water" | "electric" | "grass" | "ice" | "fighting" | "poison" | "ground" | "flying" | "psychic" | "bug" | "rock" | "ghost" | "dragon" | "dark" | "steel";
-  label?: string;
-}
-const { type, label } = Astro.props;
-const classes = `type-badge ${type}`;
----
-<span class={classes}>
-  {label ?? type.toUpperCase()}
-</span>
+<script setup lang="ts">
+defineProps<{
+  type: "normal" | "fire" | "water" | "electric" | "grass" | "ice" | "fighting" | "poison" | "ground" | "flying" | "psychic" | "bug" | "rock" | "ghost" | "dragon" | "dark" | "steel"
+  label?: string
+}>()
+</script>
+
+<template>
+  <span :class="`type-badge ${type}`">{{ label ?? type.toUpperCase() }}</span>
+</template>
 
 <style>
 .type-badge{

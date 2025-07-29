@@ -1,0 +1,75 @@
+@import "@pkmn-ui/core/index.css";
+
+/* --- GBA THEME (Gen3) ----------------------------------------- */
+:root{
+  --ui-bg        : #E9F2E5;
+  --panel-bg     : #F8F6F0;
+  --panel-border : 2px solid #2B2B2B;
+  --panel-shadow : 0 2px 0 rgba(0,0,0,.08);
+
+  --radius       : 10px;   /* 段付き角丸 */
+  --border-width : 2px;
+
+  --bevel-hl     : rgba(255,255,255,.9);
+  --bevel-sh     : rgba(0,0,0,.12);
+
+  --ui-font      : "DotGothic16", system-ui, sans-serif;
+
+  /* タイプカラー（Gen3基準） */
+  --t-normal:#A8A878; --t-fire:#F08030; --t-water:#6890F0; --t-electric:#F8D030;
+  --t-grass:#78C850; --t-ice:#98D8D8; --t-fighting:#C03028; --t-poison:#A040A0;
+  --t-ground:#E0C068; --t-flying:#A890F0; --t-psychic:#F85888; --t-bug:#A8B820;
+  --t-rock:#B8A038; --t-ghost:#705898; --t-dragon:#7038F8; --t-dark:#705848;
+  --t-steel:#B8B8D0;
+}
+
+/* === レイアウト基礎 === */
+body{
+  background:var(--ui-bg);
+  font-family:var(--ui-font);
+  color:#2B2B2B;
+  image-rendering:pixelated;      /* ドット感UP */
+}
+
+/* === 汎用パネル === */
+.panel{
+  background:var(--panel-bg);
+  border:var(--panel-border);
+  border-radius:var(--radius);
+  box-shadow:
+    inset 0 1px 0 var(--bevel-hl),
+    inset 0 -1px 0 var(--bevel-sh),
+    var(--panel-shadow);
+}
+
+/* === タイプバッジ === */
+.type-badge{
+  display:inline-flex;align-items:center;font-weight:700;
+  border:var(--border-width) solid #1C1C1C;
+  border-radius:calc(var(--radius) + 0px);
+  padding:2px 10px;font-size:14px;line-height:1;
+  text-shadow:0 1px 0 rgba(0,0,0,.15);
+  box-shadow:
+    inset 0 1px 0 var(--bevel-hl),
+    inset 0 -1px 0 var(--bevel-sh),
+    var(--panel-shadow);
+}
+
+/* 色バリエーション */
+.type-badge.normal{background:var(--t-normal);}
+.type-badge.fire{background:var(--t-fire);}
+.type-badge.water{background:var(--t-water);}
+.type-badge.electric{background:var(--t-electric);}
+.type-badge.grass{background:var(--t-grass);}
+.type-badge.ice{background:var(--t-ice);}
+.type-badge.fighting{background:var(--t-fighting);color:#fff;}
+.type-badge.poison{background:var(--t-poison);color:#fff;}
+.type-badge.ground{background:var(--t-ground);}
+.type-badge.flying{background:var(--t-flying);}
+.type-badge.psychic{background:var(--t-psychic);}
+.type-badge.bug{background:var(--t-bug);}
+.type-badge.rock{background:var(--t-rock);}
+.type-badge.ghost{background:var(--t-ghost);color:#fff;}
+.type-badge.dragon{background:var(--t-dragon);color:#fff;}
+.type-badge.dark{background:var(--t-dark);color:#fff;}
+.type-badge.steel{background:var(--t-steel);}

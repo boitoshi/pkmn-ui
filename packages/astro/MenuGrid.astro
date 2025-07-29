@@ -1,0 +1,24 @@
+---
+interface Item{ label:string; active?:boolean }
+interface Props{ items: Item[] }
+const { items } = Astro.props;
+---
+<nav class="grid">
+  {items.map(i=>(
+    <button class={`item ${i.active?'active':''}`}>
+      <span class="arrow">▶</span>{i.label}
+    </button>
+  ))}
+</nav>
+
+<style>
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:420px}
+.item{
+  @apply panel flex items-center gap-2 px-3 py-2 font-bold cursor-pointer;
+  transition:transform .12s ease;
+}
+.item:hover{transform:translateY(-1px)}
+.item .arrow{visibility:hidden}
+.item.active{outline:2px solid #3a6b92;outline-offset:-2px}
+.item.active .arrow{visibility:visible;animation:blink .9s steps(1,end) infinite}
+</style>

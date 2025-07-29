@@ -1,0 +1,62 @@
+/* 3DS 世代 UI - BASE
+   （XY・SM どちらもここを土台に上書き）
+-------------------------------------------------- */
+@import "@pkmn-ui/core/index.css";
+
+/* ======== 共通トークン ======== */
+:root{
+  /* レイアウト */
+  --ui-bg        : #f0f5ff;              /* デフォ: 微青ハイキー */
+  --panel-bg     : #ffffff;
+  --panel-border : 1px solid rgba(0,0,0,.18);
+  --panel-shadow : 0 1px 2px rgba(0,0,0,.06);
+
+  /* 形状 */
+  --radius       : 14px;
+  --border-width : 1px;
+
+  /* 立体感 */
+  --bevel-hl     : rgba(255,255,255,.7);
+  --bevel-sh     : rgba(0,0,0,.08);
+
+  /* フォント */
+  --ui-font      : "M PLUS Rounded 1c", system-ui, sans-serif;
+
+  /* アクセント色（XY が水色系、SM が暖色系で上書き予定） */
+  --accent       : #6ccfff;
+
+  /* タイプカラー（Gen6 公式基準） */
+  --t-normal:#a8a77a; --t-fire:#ee8130; --t-water:#6390f0; --t-electric:#f7d02c;
+  --t-grass:#7ac74c; --t-ice:#96d9d6; --t-fighting:#c22e28; --t-poison:#a33ea1;
+  --t-ground:#e2bf65; --t-flying:#a98ff3; --t-psychic:#f95587; --t-bug:#a6b91a;
+  --t-rock:#b6a136; --t-ghost:#735797; --t-dragon:#6f35fc; --t-dark:#705746;
+  --t-steel:#b7b7ce; --t-fairy:#d685ad;
+}
+
+/* ======== 共通レイアウト ======== */
+body{
+  background:var(--ui-bg);
+  font-family:var(--ui-font);
+  color:#303030;
+}
+
+/* パネル（共通クラス .panel を想定） */
+.panel{
+  background:var(--panel-bg);
+  border:var(--panel-border);
+  border-radius:var(--radius);
+  box-shadow:var(--panel-shadow);
+}
+
+/* タイプバッジ共通（.type-badge は Astro/Vue コンポ側で利用） */
+.type-badge{
+  display:inline-flex;align-items:center;font-weight:700;line-height:1;
+  border:var(--border-width) solid rgba(0,0,0,.24);
+  border-radius:calc(var(--radius) - 2px);
+  padding:3px 12px;font-size:14px;
+  box-shadow:inset 0 1px 0 var(--bevel-hl), inset 0 -1px 0 var(--bevel-sh);
+}
+
+/* 色は CSS 変数に依存（例として一部） */
+.type-badge.fire{background:var(--t-fire);}
+.type-badge.water{background:var(--t-water);}

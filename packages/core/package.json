@@ -1,0 +1,7 @@
+{
+  "name": "@pkmn-ui/core",
+  "version": "0.0.0",
+  "description": "Core CSS utilities and base styles for Pokémon UI components",
+  "main": "index.css",
+  "license": "MIT"
+}
