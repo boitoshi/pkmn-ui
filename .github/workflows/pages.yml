@@ -35,8 +35,14 @@ jobs:
           cp -r apps/demo-astro/dist/* site/
           mkdir site/vue
           cp -r apps/demo-vue/dist/*    site/vue/
-          mkdir -p site/packages
-          cp -r packages/themes site/packages/
+          mkdir -p site/packages/themes/gba
+          mkdir -p site/packages/themes/ds/dot  
+          mkdir -p site/packages/themes/switch/lgpe
+          mkdir -p site/packages/themes/switch/swsh
+          cp packages/themes/gba/index.css site/packages/themes/gba/
+          cp packages/themes/ds/dot/index.css site/packages/themes/ds/dot/
+          cp packages/themes/switch/lgpe/index.css site/packages/themes/switch/lgpe/
+          cp packages/themes/switch/swsh/index.css site/packages/themes/switch/swsh/
 
       # Pages 用アーティファクトとしてアップロード
       - uses: actions/upload-pages-artifact@v3
