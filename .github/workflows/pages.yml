@@ -26,8 +26,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       # --- 各デモをビルド ---
-      - run: pnpm --filter apps/demo-astro build
-      - run: pnpm --filter apps/demo-vue   build
+      - run: pnpm --filter @pkmn-ui/demo-astro build
+      - run: pnpm --filter @pkmn-ui/demo-vue   build
 
       # dist → public サイト用ディレクトリをまとめる
       - run: |
