@@ -35,6 +35,8 @@ jobs:
           cp -r apps/demo-astro/dist/* site/
           mkdir site/vue
           cp -r apps/demo-vue/dist/*    site/vue/
+          mkdir -p site/packages
+          cp -r packages/themes site/packages/
 
       # Pages 用アーティファクトとしてアップロード
       - uses: actions/upload-pages-artifact@v3

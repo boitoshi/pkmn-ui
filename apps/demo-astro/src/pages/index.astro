@@ -21,7 +21,7 @@ const themes = [
 <head>
   <meta charset="utf-8" />
   <title>PKMN-UI デモ - テーマ切り替え</title>
-  <link rel="stylesheet" href="/node_modules/@pkmn-ui/themes/gba/index.css" id="theme-css">
+  <link rel="stylesheet" href="/pkmn-ui/packages/themes/gba/index.css" id="theme-css">
 </head>
 <body style="padding:24px">
   <div class="demo-container">
@@ -38,7 +38,7 @@ const themes = [
           ))}
         </select>
         
-        <a href="./vue/" class="framework-switch-btn" style="margin-left:16px;">
+        <a href="/pkmn-ui/vue/" class="framework-switch-btn" style="margin-left:16px;">
           🔄 Vue版で見る
         </a>
       </div>
@@ -75,10 +75,10 @@ const themes = [
     const themeCss = document.getElementById('theme-css');
     
     const themeMap = {
-      'gba': '/node_modules/@pkmn-ui/themes/gba/index.css',
-      'ds-dot': '/node_modules/@pkmn-ui/themes/ds/dot/index.css',
-      'lgpe': '/node_modules/@pkmn-ui/themes/switch/lgpe/index.css',
-      'swsh': '/node_modules/@pkmn-ui/themes/switch/swsh/index.css'
+      'gba': '/pkmn-ui/packages/themes/gba/index.css',
+      'ds-dot': '/pkmn-ui/packages/themes/ds/dot/index.css',
+      'lgpe': '/pkmn-ui/packages/themes/switch/lgpe/index.css',
+      'swsh': '/pkmn-ui/packages/themes/switch/swsh/index.css'
     };
 
     themeSelect?.addEventListener('change', (e) => {

@@ -38,10 +38,10 @@ const loadTheme = async (themeId) => {
   
   // 新しいテーマCSSを読み込み
   const themePath = {
-    'gba': '/node_modules/@pkmn-ui/themes/gba/index.css',
-    'ds-dot': '/node_modules/@pkmn-ui/themes/ds/dot/index.css',
-    'lgpe': '/node_modules/@pkmn-ui/themes/switch/lgpe/index.css',
-    'swsh': '/node_modules/@pkmn-ui/themes/switch/swsh/index.css'
+    'gba': '/pkmn-ui/packages/themes/gba/index.css',
+    'ds-dot': '/pkmn-ui/packages/themes/ds/dot/index.css',
+    'lgpe': '/pkmn-ui/packages/themes/switch/lgpe/index.css',
+    'swsh': '/pkmn-ui/packages/themes/switch/swsh/index.css'
   }
   
   const link = document.createElement('link')
@@ -94,7 +94,7 @@ onMounted(() => {
           </option>
         </select>
         
-        <a href="../" class="framework-switch-btn" style="margin-left:16px;">
+        <a href="/pkmn-ui/" class="framework-switch-btn" style="margin-left:16px;">
           🔄 Astro版で見る
         </a>
       </div>
